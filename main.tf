@@ -174,7 +174,7 @@ resource "aws_instance" "myapp-server" {
   associate_public_ip_address = true
   availability_zone = var.avail_zone
 
-  user_data = file("user-script.sh")
+  user_data = file("entry-script.sh")
 
   key_name = aws_key_pair.ssh-key.key_name
   tags = {
